@@ -1,0 +1,51 @@
+2015-07-01 20:42:36.802 DucaBelintani[43527:50546414] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/fabiobatalha/Library/Developer/CoreSimulator/Devices/71D40E1C-1BE9-43A2-B5F0-AD1E2BDD173F/data/Containers/Data/Application/B38A2AB7-34B6-4563-B81B-E571547690D3/Library/Cookies/Cookies.binarycookies
+2015-07-01 20:42:37.535 DucaBelintani[43527:50546414] Apache Cordova native platform version 3.8.0 is starting.
+2015-07-01 20:42:37.536 DucaBelintani[43527:50546414] Multi-tasking -> Device: YES, App: YES
+2015-07-01 20:42:37.590 DucaBelintani[43527:50546414] Unlimited access to network resources
+2015-07-01 20:42:37.604 DucaBelintani[43527:50546414] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-07-01 20:42:39.359 DucaBelintani[43527:50546414] Resetting plugins due to page load.
+2015-07-01 20:42:39.666 DucaBelintani[43527:50546414] Finished load of: file:///Users/fabiobatalha/Library/Developer/CoreSimulator/Devices/71D40E1C-1BE9-43A2-B5F0-AD1E2BDD173F/data/Containers/Bundle/Application/F9C4AE4A-68A6-4569-9FB4-F79F44868E29/DucaBelintani.app/www/index.html
+2015-07-01 23:32:16.670 DucaBelintani[3857:46915] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/fabiobatalha/Library/Developer/CoreSimulator/Devices/C8E598A3-69D4-4395-AD87-01B531536255/data/Containers/Data/Application/5109F5BC-8383-4854-8DE2-B235D994BAB6/Library/Cookies/Cookies.binarycookies
+2015-07-01 23:32:16.912 DucaBelintani[3857:46915] Apache Cordova native platform version 3.8.0 is starting.
+2015-07-01 23:32:16.920 DucaBelintani[3857:46915] Multi-tasking -> Device: YES, App: YES
+2015-07-01 23:32:16.972 DucaBelintani[3857:46915] Unlimited access to network resources
+2015-07-01 23:32:17.006 DucaBelintani[3857:46915] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-07-01 23:32:17.393 DucaBelintani[3857:46915] [CDVTimer][file] 64.944983ms
+2015-07-01 23:32:17.393 DucaBelintani[3857:46915] [CDVTimer][TotalPluginStartup] 65.190017ms
+2015-07-01 23:32:17.669 DucaBelintani[3857:46915] Resetting plugins due to page load.
+2015-07-01 23:32:17.945 DucaBelintani[3857:46915] Finished load of: file:///Users/fabiobatalha/Library/Developer/CoreSimulator/Devices/C8E598A3-69D4-4395-AD87-01B531536255/data/Containers/Bundle/Application/C2FD1961-020E-42D3-82E2-1987BEB29BE1/DucaBelintani.app/www/index.html
+2015-07-01 23:32:18.188 DucaBelintani[3857:46915] THREAD WARNING: ['Media'] took '12.132812' ms. Plugin should use a background thread.
+2015-07-01 23:32:18.189 DucaBelintani[3857:46915] Found resource '/Users/fabiobatalha/Library/Developer/CoreSimulator/Devices/C8E598A3-69D4-4395-AD87-01B531536255/data/Containers/Bundle/Application/C2FD1961-020E-42D3-82E2-1987BEB29BE1/DucaBelintani.app/www/audio/a1.mp3' in the web folder.
+2015-07-01 23:32:18.899 DucaBelintani[3857:46915] Playing audio sample 'audio/a1.mp3'
+2015-07-01 23:32:20.164 DucaBelintani[3857:46915] THREAD WARNING: ['Media'] took '1974.695068' ms. Plugin should use a background thread.
+2015-07-01 23:32:37.190 DucaBelintani[3857:47501] Terminating since there is no system app.
+2015-07-02 00:29:52.222 DucaBelintani[7037:83201] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/fabiobatalha/Library/Developer/CoreSimulator/Devices/C8E598A3-69D4-4395-AD87-01B531536255/data/Containers/Data/Application/24E1AE8B-200E-4346-A63E-B9D922B6CB94/Library/Cookies/Cookies.binarycookies
+2015-07-02 00:29:52.415 DucaBelintani[7037:83201] Apache Cordova native platform version 3.8.0 is starting.
+2015-07-02 00:29:52.415 DucaBelintani[7037:83201] Multi-tasking -> Device: YES, App: YES
+2015-07-02 00:29:52.441 DucaBelintani[7037:83201] Unlimited access to network resources
+2015-07-02 00:29:52.445 DucaBelintani[7037:83201] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-07-02 00:29:52.558 DucaBelintani[7037:83201] [CDVTimer][file] 3.766000ms
+2015-07-02 00:29:52.559 DucaBelintani[7037:83201] [CDVTimer][TotalPluginStartup] 3.947973ms
+2015-07-02 00:29:52.775 DucaBelintani[7037:83201] Resetting plugins due to page load.
+2015-07-02 00:29:52.897 DucaBelintani[7037:83201] Finished load of: file:///Users/fabiobatalha/Library/Developer/CoreSimulator/Devices/C8E598A3-69D4-4395-AD87-01B531536255/data/Containers/Bundle/Application/5931908A-895F-47BD-AD07-650E864F984F/DucaBelintani.app/www/index.html
