@@ -17,19 +17,19 @@
  * under the License.
  */
 
-@keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
-}
- 
-@-webkit-keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
-}
- 
-.blink {
-    animation:fade 3000ms infinite;
-    -webkit-animation:fade 3000ms infinite;
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color: #000000;
+    background: url(../img/background.png) no-repeat; /* 170px x 200px */
+    background-position: center 0px;
+    background-attachment:fixed;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    width:100%;
+    padding-top: 85px;
+    padding-bottom: 70px;
 }

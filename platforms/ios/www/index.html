@@ -1,66 +1,83 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
     <head>
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Duca Belintani</title>
+        <title>Teste</title>
     </head>
     <body>
-        <nav class="navbar navbar-inverse navbar-static-top">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <div class="navbar-brand">
-                Duca Belintani
+      <div class="container-fluid">
+        <div class="row"> <!-- header -->
+          <nav class="navbar navbar-inverse navbar-fixed-top" style="padding-top: 15px">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Duca Belintani Songs</a>
+              </div>
+              <div class="collapse navbar-collapse pull-left" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-sm">How Long</a></li>
+                  <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-sm">Rota 145</a></li>
+                  <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-sm">Na Trilha do Blues</a></li>
+                  <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-sm">Devassa</a></li>
+                </ul>
+              </div>
+          </nav>
+        </div>
+        <div class="row"> <!-- body -->
+        </div>
+        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Playing How Long</h4>
+              </div>
+              <div class="modal-footer">
+                <center>
+                  <button type="button" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
+                  </button>
+                  <div id="audio_play" type="button" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+                  </div>
+                  <button type="button" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+                  </button>
+                  <button type="button" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
+                  </button>
+                  <button type="button" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-volume-off" aria-hidden="true"></span>
+                  </button>
+                </center>
               </div>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav">
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Songs <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">How Long</a></li>
-                    <li><a href="#">Rota 145</a></li>
-                    <li><a href="#">Na Trilha do Blues</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
           </div>
-        </nav>
-        <div class="blink">Teste</div>
+        </div>
+        <div class="row"><!-- bottom -->
+          <nav class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="container-fluid">
+            <center>
+              <a href="http://www.facebook.com/ducabelintani" target="_system" class="btn btn-default btn-sm navbar-btn"><img src="img/facebook.png" width="20px"/></a>
+              <a href="http://www.twitter.com/ducabelintani" target="_system" class="btn btn-default btn-sm navbar-btn"><img src="img/twitter.png" width="20px"/></a>
+              <a href="http://www.ducabelintani.com.br" target="_system"class="btn btn-default btn-sm navbar-btn"><img src="img/website.png" width="20px"/></a>
+            </center>
+            </div>
+          </nav>
+        </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+      </div>
     </body>
 </html>
