@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <!--meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"-->
+        <!--meta name="format-detection" content="telephone=no"-->
+        <!--meta name="msapplication-tap-highlight" content="no"-->
+        <!--meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"-->
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <title>Teste</title>
@@ -41,27 +41,34 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Playing How Long</h4>
               </div>
+              <div>Player: <span id="player_status" style="display: None;">Available</span></div>
               <div class="modal-footer">
                 <center>
-                  <button type="button" class="btn btn-default btn-sm">
+                  <div type="button" class="btn btn-default btn-sm">
                     <span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
-                  </button>
-                  <div id="audio_play" type="button" class="btn btn-default btn-sm">
+                  </div>
+                  <div id="player_play" type="button" class="btn btn-default btn-sm" onClick="alert('start'); playAudio('audio/devassa.mp3');">
                     <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                   </div>
-                  <button type="button" class="btn btn-default btn-sm">
+                  <div id="player_stop" type="button" class="btn btn-default btn-sm" onClick="alert('stop'); stopAudio();">
+                    <span class="glyphicon glyphicon-stop" aria-hidden="true"></span>
+                  </div>
+                  <div id="player_stop" type="button" class="btn btn-default btn-sm" onClick="alert('pause'); pauseAudio();">
                     <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
-                  </button>
-                  <button type="button" class="btn btn-default btn-sm">
+                  </div>
+                  <div type="button" class="btn btn-default btn-sm">
                     <span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
-                  </button>
-                  <button type="button" class="btn btn-default btn-sm">
+                  </div>
+                  <div type="button" class="btn btn-default btn-sm">
                     <span class="glyphicon glyphicon-volume-off" aria-hidden="true"></span>
-                  </button>
+                  </div>
                 </center>
               </div>
             </div>
           </div>
+        </div>
+        <div class="row">
+          <p id="audio_position"></p>
         </div>
         <div class="row"><!-- bottom -->
           <nav class="navbar navbar-inverse navbar-fixed-bottom">
@@ -74,10 +81,10 @@
             </div>
           </nav>
         </div>
+        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-        <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
       </div>
     </body>
 </html>

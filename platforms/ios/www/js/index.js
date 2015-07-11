@@ -1,59 +1,80 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
 var app = {
-    // Application Constructor
     initialize: function() {
         console.log("initialize Duca");
         this.bindEvents();
     },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         console.log("Device Ready");
         console.log("Media");
-        document.querySelector("audio_play").addEventListener("touchend", playAudio, false);
+        $('#player_status').show();
+        $('#player_play').children().prop('enabled',true);
+        $('#player_pause').children().prop('disabled',true);
+        $('#player_stop').children().prop('disabled',true);
     },
 };
 
 app.initialize();
 
-function playAudio() {
-    // Play the audio file at url
-    var my_media = new Media('audio/devassa.mp3',
-        // success callback
-        function () {
-            console.log("playAudio():Audio Success");
-        },
-        // error callback
-        function (err) {
-            console.log("playAudio():Audio Error: " + err);
-        }
-    );
-    // Play audio
+var my_media = null;
+var mediaTimer = null;
+function playAudio(src){
+    var my_media = new Media(src);
     my_media.play();
-}.js
+    $('#player_start').children().prop('disabled',true);
+    $('#player_pause').children().prop('enabled',true);
+    $('#player_stop').children().prop('enabled',true);
+    if (mediaTimer == null) {
+        mediaTimer = setInterval(function() {
+            // get my_media position
+            my_media.getCurrentPosition(
+                // success callback
+                function(position) {
+                    if (position > -1) {
+                        setAudioPosition((position) + " sec");
+                    }
+                },
+                // error callback
+                function(e) {
+                    console.log("Error getting pos=" + e);
+                    setAudioPosition("Error: " + e);
+                }
+            );
+        }, 1000);
+    }
+}
+
+function pauseAudio() {
+    if (my_media) {
+        my_media.pause();
+        $('#player_start').children().prop('enabled',true);
+        $('#player_pause').children().prop('disabled',true);
+        $('#player_stop').children().prop('enabled',true);
+    }
+}
+
+function stopAudio() {
+    if (my_media) {
+        my_media.stop();
+        $('#player_start').children().prop('enabled',true);
+        $('#player_pause').children().prop('disabled',true);
+        $('#player_stop').children().prop('disabled',true);
+    }
+    clearInterval(mediaTimer);
+    mediaTimer = null;
+}
+
+function onSuccess() {
+    console.log("playAudio():Audio Success");
+}
+
+function onError(error) {
+    alert('code: '    + error.code    + '\n' +
+          'message: ' + error.message + '\n');
+}
+
+function setAudioPosition(position) {
+    $('#audio_position').text(position);
+}
