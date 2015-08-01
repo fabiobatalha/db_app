@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>675BA772-8BAA-47B8-9F4E-B73D05BB0A3F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DucaBelintani</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BBA83CCCA5973D3981259A6016BB5D7D154ABD3E</key>
+		<string>https://github.com/fabiobatalha/db_app.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>platforms/ios/DucaBelintani.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BBA83CCCA5973D3981259A6016BB5D7D154ABD3E</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/fabiobatalha/db_app.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BBA83CCCA5973D3981259A6016BB5D7D154ABD3E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BBA83CCCA5973D3981259A6016BB5D7D154ABD3E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ducabelintani</string>
+		</dict>
+	</array>
+</dict>
+</plist>

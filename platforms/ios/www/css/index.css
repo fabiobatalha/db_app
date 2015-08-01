@@ -22,10 +22,12 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color: #000000;
-    background: url(../img/background.png) no-repeat; /* 170px x 200px */
-    background-position: center 0px;
-    background-attachment:fixed;
+    
+    background: url(../img/background.png) #000000; /* 170px x 200px */
+    background-position: center 0%;
+    background-attachment: fixed;
+    background-size: contain;
+    background-repeat: no-repeat;
     font-size:12px;
     height:100%;
     margin:0px;

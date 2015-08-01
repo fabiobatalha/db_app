@@ -24,39 +24,43 @@
               </div>
               <div class="collapse navbar-collapse pull-left" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                  <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-sm">How Long</a></li>
-                  <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-sm">Rota 145</a></li>
-                  <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-sm">Na Trilha do Blues</a></li>
-                  <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-sm">Devassa</a></li>
+                  <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-sm" onClick="playByIndex(0);">How Long</a></li>
+                  <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-sm" onClick="playByIndex(1);">Rota 145</a></li>
+                  <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-sm" onClick="playByIndex(2);">Na Trilha do Blues</a></li>
+                  <li><a href="#" data-toggle="modal" data-target=".bs-example-modal-sm" onClick="playByIndex(3);">Devassa</a></li>
                 </ul>
               </div>
           </nav>
         </div>
         <div class="row"> <!-- body -->
         </div>
-        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" style="padding-top: 100px">
           <div class="modal-dialog modal-sm">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Playing How Long</h4>
+                <h4 class="modal-title" id="myModalLabel">Playing <span id="media_title"></span></h4>
               </div>
-              <div>Player: <span id="player_status" style="display: None;">Available</span></div>
+                <div class="container-fluid">
+                  <div id="audio_position" class="col-xs-6">pos</div>
+                  <div id="audio_time" class="col-xs-6 text-right">time</div>
+                  <progress id="progress_bar" value="0" max="100" style="width: 100%; height: 10px;"></progress>
+                </div>
               <div class="modal-footer">
                 <center>
-                  <div type="button" class="btn btn-default btn-sm">
+                  <div id="player_previous" type="button" class="btn btn-default btn-sm" onClick="previousAudio();">
                     <span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
                   </div>
-                  <div id="player_play" type="button" class="btn btn-default btn-sm" onClick="alert('start'); playAudio('audio/devassa.mp3');">
+                  <div id="player_play" type="button" class="btn btn-default btn-sm" onClick="playAudio();">
                     <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
                   </div>
-                  <div id="player_stop" type="button" class="btn btn-default btn-sm" onClick="alert('stop'); stopAudio();">
+                  <div id="player_stop" type="button" class="btn btn-default btn-sm" onClick="stopAudio();">
                     <span class="glyphicon glyphicon-stop" aria-hidden="true"></span>
                   </div>
-                  <div id="player_stop" type="button" class="btn btn-default btn-sm" onClick="alert('pause'); pauseAudio();">
+                  <div id="player_pause" type="button" class="btn btn-default btn-sm" onClick="pauseAudio();">
                     <span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
                   </div>
-                  <div type="button" class="btn btn-default btn-sm">
+                  <div id="player_next" type="button" class="btn btn-default btn-sm" onClick="nextAudio();">
                     <span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
                   </div>
                   <div type="button" class="btn btn-default btn-sm">
@@ -66,9 +70,6 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <p id="audio_position"></p>
         </div>
         <div class="row"><!-- bottom -->
           <nav class="navbar navbar-inverse navbar-fixed-bottom">
